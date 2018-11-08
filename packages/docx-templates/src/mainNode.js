@@ -59,13 +59,13 @@ const createReport = async (options: UserOptions) => {
   const report = await createReportBrowser(newOptions);
   if (_probe != null) return report;
 
-    /*// ---------------------------------------------------------
+    /* // ---------------------------------------------------------
     // Write the result on filesystem
     // ---------------------------------------------------------
     DEBUG && log.debug('Writing report to disk...');
     await fs.ensureDir(path.dirname(output));
     await fs.writeFile(output, report);
-    return null;*/
+    return null; */
 
     return Buffer.from(report);
 };
