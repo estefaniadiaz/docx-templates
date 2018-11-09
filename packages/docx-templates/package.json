@@ -34,8 +34,8 @@
     "test": "yarn testCovFull",
     "testCovFull": "yarn testCovPrepare && yarn testDev && yarn testCovReport",
     "testCovPrepare": "rm -rf ./coverage .nyc_output .nyc_tmp && mkdir .nyc_tmp",
-    "testDev": "NODE_ENV=development jest --coverage && mv .nyc_output/coverage-final.json .nyc_tmp/coverage-dev.json && rm -rf .nyc_output",
-    "testProd": "NODE_ENV=production jest --coverage && mv .nyc_output/coverage-final.json .nyc_tmp/coverage-prod.json && rm -rf .nyc_output",
+    "testDev": "set NODE_ENV=development && jest --coverage && mv .nyc_output/coverage-final.json .nyc_tmp/coverage-dev.json && rm -rf .nyc_output",
+    "testProd": "set NODE_ENV=production && jest --coverage && mv .nyc_output/coverage-final.json .nyc_tmp/coverage-prod.json && rm -rf .nyc_output",
     "testCovReport": "cp -r .nyc_tmp .nyc_output && nyc report --reporter=html --reporter=lcov --reporter=text"
   },
   "engines": {
