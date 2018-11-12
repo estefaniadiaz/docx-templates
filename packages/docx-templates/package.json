@@ -22,10 +22,6 @@
     "type": "git",
     "url": "git+https://github.com/guigrpa/docx-templates.git"
   },
-  "files": [
-    "node_modules",
-    "lib"
-  ],
   "scripts": {
     "compile": "yarn compile:prepare && yarn compile:copy && yarn compile:run",
     "compileWatch": "yarn compile:prepare && yarn compile:copy && yarn compile:run --watch",
